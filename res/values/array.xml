@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="flower">
+        <item>[꽃이름]</item>
+        <item>장미</item>
+        <item>백합</item>
+        <item>안개꽃</item>
+        <item>수선화</item>
+        <item>데이지</item>
+        <item>해바라기</item>
+    </string-array>
+
+    <string-array name="mail_list">
+        <item >Google</item>
+        <item >Naver</item>
+        <item >Daum</item>
+        <item >기타</item>
+    </string-array>
+    <string-array name="mail_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <!--유내파트-->
+
+    <string-array name="s1">
+        <item>브랜드</item>
+        <item>랑방</item>
+        <item>안나 수이</item>
+        <item>마크 제이콥스</item>
+        <item>캘빈 클라인</item>
+    </string-array>
+
+    <string-array name="s2">
+        <item>계열</item>
+        <item>floral</item>
+        <item>fruity</item>
+        <item>woody</item>
+        <item>else</item>
+    </string-array>
+
+    <string-array name="s3">
+        <item>연령</item>
+        <item>10대</item>
+        <item>20대</item>
+        <item>30대</item>
+        <item>40대 이상</item>
+    </string-array>
+
+    <string-array name="s4">
+        <item>성별</item>
+        <item>여성</item>
+        <item>남성</item>
+    </string-array>
+
+    <!--
+    <string-array name="s5">
+        <item>가격</item>
+        <item>~1만원</item>
+        <item>~2만원</item>
+        <item>~3만원</item>
+        <item>~5만원</item>
+        <item>~10만원</item>
+        <item>10만원~</item>
+    </string-array>-->
+
+    <string-array name="s6">
+        <item>정렬</item>
+        <item>조회순</item>
+        <item>리뷰순</item>
+    </string-array>
+
+    <string-array name="request">
+        <item>제품 등록 요청하기</item>
+    </string-array>
+</resources>

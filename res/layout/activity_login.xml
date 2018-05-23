@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:focusable="false">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/txt_email2"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:hint="이메일(email@example.com)"
+            android:background="@drawable/rounded_edittext" />
+
+        <EditText
+            android:id="@+id/txt_password2"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:hint="비밀번호 입력(영문+숫자, 8-16자리)"
+            android:background="@drawable/rounded_edittext"
+            android:password="true" />
+
+        <ImageView
+            android:id="@+id/btn_login"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="true"
+            android:src="@mipmap/btn_login"/>
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호를 잊으셨나요?"/>
+    </LinearLayout>-->
+
+    <!--또는 다른 방법으로 로그인-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/line"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="또는"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/line"/>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/btn_facebook_login"
+            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:onClick="true"
+            android:src="@mipmap/btn_facebook_login"
+            android:layout_gravity="bottom" />
+        <ImageView
+            android:id="@+id/btn_google_login"
+            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:onClick="true"
+            android:src="@mipmap/btn_google_login"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+
+</LinearLayout>

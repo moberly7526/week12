@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/iconImage"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 버전"
+        android:textSize="12sp"
+        android:id="@+id/presentVersionText"
+        android:layout_alignTop="@+id/iconImage"
+        android:layout_toRightOf="@+id/iconImage"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최신 버전"
+        android:textSize="12sp"
+        android:id="@+id/recentVersionText"
+        android:layout_below="@+id/presentVersionText"
+        android:layout_toRightOf="@+id/iconImage"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v1.0.0"
+        android:textSize="15sp"
+        android:id="@+id/presentVersionText2"
+        android:layout_alignTop="@+id/presentVersionText"
+        android:layout_toRightOf="@+id/presentVersionText"
+        android:layout_marginLeft="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v2.0.1"
+        android:textSize="15sp"
+        android:textColor="#1D2088"
+        android:id="@+id/recentVersionText2"
+        android:layout_alignTop="@+id/recentVersionText"
+        android:layout_alignLeft="@+id/presentVersionText2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최신 버전 업데이트 하기"
+        android:id="@+id/updateButton"
+        android:layout_below="@+id/iconImage"
+        android:layout_alignLeft="@+id/iconImage"
+        android:layout_marginTop="22dp"
+        android:layout_alignRight="@+id/recentVersionText2"
+        android:background="#727171"
+        android:textColor="#ffffff"
+        android:clickable="true"/>
+
+</RelativeLayout>

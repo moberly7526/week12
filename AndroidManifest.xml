@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.androidhive.loginandregistration"
+    android:versionCode="1"
+    android:versionName="1.0" >
+<!--최소,최대 sdk-->
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+    <!--인터넷 permission-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--카메라 및 갤러리 사용 permission-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.Camera" android:required="true"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!--스플레시 액티비티 + 가로모드 방지-->
+        <activity
+            android:name = ".SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait"
+            android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><!--스플레시 액티비티 끝-->
+        <!--singleTop이 설정된 액티비티는 호출되면 호출된 것만큼 생성하나, 기존에 생성된 것이 있다면 재활용 -앱재실행시 바로 직전화면
+            singleTask의 경우 기존 액티비티를 죽이고 새로은 instance를 생성하며 때문에 항상 onCreate부터 시작 -앱 재실행시 첫화면 부터
+             android:launchMode="singleTop" -->
+        <activity android:name=".MainActivity" android:label="이거너향" android:launchMode="singleTop" android:theme="@style/CustomActionBarTheme" />
+        <activity android:name=".LoginIntro"/>
+        <activity android:name=".EmailJoin" android:label="이메일로 가입하기" android:theme="@style/CustomActionBarTheme"  />
+        <activity android:name=".MakeNickName" android:label="닉네임 만들기1" android:theme="@style/CustomActionBarTheme"  />
+        <activity android:name=".MakeNickName2" android:label="닉네임 만들기2" android:theme="@style/CustomActionBarTheme"  />
+        <activity android:name=".LoginFinal" android:label="완료" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".Login" android:label="로그인" android:theme="@style/CustomActionBarTheme2"/>
+        <activity android:name=".Login2" android:label="로그인" android:theme="@style/CustomActionBarTheme2"/>
+
+        <!--수진언니 파트-->
+        <activity android:name=".Dictionary" android:label="향 백과사전" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".Dicnote" android:label="용어" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".Kind" android:label="종류" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".Classify" android:label="종류상세" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".MyHistory" android:label="역사" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".Suggest" android:label="내향뭐향?" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".SuggestResult" android:label="결과" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <!--마이페이지 부터-->
+        <activity android:name=".SettingsActivity" android:label="@string/action_settings"/>
+        <activity android:name=".LoginInfoActivity" android:label="@string/title_activity_login_info" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".MadeByActivity" android:label="@string/title_activity_made_by" android:theme="@style/CustomActionBarTheme" />
+        <activity android:name=".NotificationActivity" android:label="@string/title_activity_notification" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".VersionInfoActivity" android:label="@string/title_activity_version_info" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".MyPageActivity" android:label="@string/title_activity_my_page" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".InquireActivity" android:label="문의하기" android:theme="@style/CustomActionBarTheme"/>
+
+        <activity android:name=".MyWish" android:label="@string/title_activity_my_page" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".MyRecent" android:label="@string/title_activity_my_page" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".MyReview" android:label="@string/title_activity_my_page" android:theme="@style/CustomActionBarTheme"/>
+
+        <!--유내파트-->
+        <activity android:name=".Search" android:label = "제품 검색"/>
+        <activity android:name=".Product" android:label="제품 상세" android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".Record" android:label="시향기록"  android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name=".AddRecord" android:label="시향기록추가" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:name=".EditRecord" android:label="시향기록수정" android:theme="@style/Theme.AppCompat.Dialog"/>
+        <activity android:name=".WriteReview" android:label="리뷰작성" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp">
+
+        <FrameLayout android:id="@+id/f1"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/chart" android:src="@drawable/m"
+                android:layout_width="match_parent" android:layout_height="80dp"
+                android:layout_marginLeft="3dp" android:layout_marginRight="3dp"/>
+            <ImageView
+                android:id="@+id/depth"
+                android:layout_width="50dp" android:layout_height="50dp" android:layout_gravity="right"
+                android:layout_marginTop="30dp" android:layout_marginRight="75dp" />
+        </FrameLayout>
+
+        <FrameLayout android:id="@+id/f2"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp">
+            <ImageView
+                android:id="@+id/notes" android:src="@drawable/q"
+                android:layout_width="wrap_content" android:layout_height="300dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="50dp" android:layout_gravity="center_horizontal">
+                <GridView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/gview"
+                    android:horizontalSpacing="0dp"
+                    android:numColumns="auto_fit"
+                    android:stretchMode="columnWidth"
+                    android:gravity="center"
+                    android:clickable="false">
+                </GridView>
+                <TextView
+                    android:id="@+id/typeName" android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/top" android:text="탑노트"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="143dp" android:layout_marginLeft="130dp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/mid" android:text="미들노트"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="193dp" android:layout_marginLeft="130dp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/base" android:text="베이스노트"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="242dp" android:layout_marginLeft="130dp"
+                android:textSize="18sp"/>
+        </FrameLayout>
+
+        <FrameLayout android:id="@+id/f3"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp" android:layout_marginRight="3dp">
+
+            <ImageView
+                android:id="@+id/review_background" android:src="@drawable/review_background"
+                android:layout_width="match_parent" android:layout_height="155dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="향수 평가하기" android:layout_marginBottom="3dp"
+                    android:textStyle="bold" android:textSize="18sp"/>
+                <ImageView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/rating" android:src="@drawable/rating_fake_button" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

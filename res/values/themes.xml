@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 앱이나 액티비티에 적용되는 테마 -->
+    <style name="CustomActionBarTheme"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <!-- 앱이나 액티비티에 적용되는 테마 -->
+    <style name="CustomActionBarTheme2"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar2</item>
+    </style>
+
+    <!-- 액션 바 스타일 -->
+    <style name="MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:homeAsUpIndicator">@mipmap/back</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/actionbar_background</item>
+        <item name="homeAsUpIndicator">@mipmap/back</item>
+
+    </style>
+
+    <!-- 액션 바 스타일2 -->
+    <style name="MyActionBar2"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:homeAsUpIndicator">@mipmap/back2</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/actionbar_background2</item>
+        <item name="homeAsUpIndicator">@mipmap/back2</item>
+
+    </style>
+
+    <!--스플레시 테마-->
+    <style name = "SplashTheme" parent = "@android:style/Theme.Light.NoTitleBar">
+        <item name = "android:windowBackground">@drawable/default_splash</item>
+    </style>
+
+    <style name="customRatingBar2" parent="@android:style/Widget.RatingBar" >
+        <item name="android:progressDrawable">@drawable/ratingbar2_full</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:maxHeight">30dp</item>
+    </style>
+
+</resources>

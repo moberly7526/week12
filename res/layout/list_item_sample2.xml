@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/panel_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+        <!--제품정보와 리뷰를 묶는 레이아웃-->
+        <FrameLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_edges"
+            android:padding="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp">
+            <!--글 수정및 삭제버튼 이미지-->
+            <ImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/my_delete"
+                android:layout_gravity="top|right"
+                android:onClick="true" />
+            <!--제품정보-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/default_img" />
+                <TextView
+                    android:id="@+id/brandName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="브랜드"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignTop="@+id/productImage"
+                    android:layout_toRightOf="@+id/productImage"/>
+                <TextView
+                    android:id="@+id/perfumeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="향수이름"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@+id/brandName"
+                    android:layout_toRightOf="@+id/productImage"/>
+            </RelativeLayout>
+            <!--상품정보와 리뷰를 나누는 경계선 이미지-->
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:layout_marginTop="50dp" />
+            <!--리뷰-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!--리뷰 자세히 보기-->
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/profile_img"/>
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="아이디아이디"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignTop="@+id/profileImage"
+                    android:layout_toRightOf="@+id/profileImage"/>
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@+id/userName"
+                    android:layout_toRightOf="@+id/profileImage"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_alignLeft="@+id/userName"
+                    android:text="리뷰리뷰리뷰리뷰"
+                    android:id="@+id/review" />
+            </RelativeLayout><!--리뷰끝-->
+        </FrameLayout><!--제품정보와 리뷰 묶는 레이아웃 끝-->
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/panel_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="220dp"
+        android:background="@drawable/rounded_edges"
+        android:layout_gravity="center_horizontal">
+
+        <!--여기에 제품 이미지-->
+        <ImageView
+            android:id="@+id/product_img2"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/brand_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="35dp"
+            android:text="브랜드"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/perfume_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="12dp"
+            android:text="향수이름"
+            android:textSize="16sp" />
+
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="6dp"
+    android:layout_gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="5dp">
+        <EditText
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/nbrandname" android:hint="브랜드명"
+            android:singleLine="true" android:maxLength="7"
+            android:textSize="14sp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text=" / " android:textSize="25dp" android:id="@+id/slash"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nproductname" android:hint="제품명"
+            android:singleLine="true" android:maxLength="15"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="100dp" android:layout_height="110dp"
+            android:id="@+id/nrimg" android:src="@drawable/default_img"/>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+            android:layout_marginLeft="10dp" android:layout_gravity="center">
+            <RatingBar
+                android:id="@+id/nrrb" android:layout_marginTop="10dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                style="@style/customRatingBar" />
+            <RelativeLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/nrrb">
+                <EditText
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/nrcomment" android:hint="한줄평(40자 이내)"
+                    android:maxLength="40"
+                    android:textStyle="bold"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+        <Button
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="10dp" android:layout_marginRight="5dp"
+            android:background="@drawable/button_corner" android:text="취소"
+            android:id="@+id/cancel"/>
+        <Button
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="10dp"
+            android:background="@drawable/button_corner" android:text="저장하기"
+            android:id="@+id/store"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <!--상단 프레임레이아웃 시작-->
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="178dp"
+        android:background="#3E3A39">
+
+        <ImageView
+            android:id = "@+id/profile_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/my_default" />
+        <!--설정 아이콘, 누르면 설정페이지로 넘어감-->
+        <ImageView
+            android:id="@+id/setting_img3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:onClick="true"
+            android:src="@drawable/setting" />
+
+        <TextView
+            android:id="@+id/nickname3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="25dp"
+            android:text="아이디/ 닉넴"
+            android:textSize="16sp"
+            android:textColor="#ffffff" />
+
+    </FrameLayout><!--상단  프레임레이아웃 끝-->
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"><!--#DC504F,#3E3A39-->
+
+        <TextView
+            android:id="@+id/my_recent3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C9CACA"
+            android:text = "최근 본 향수"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_alignTop="@+id/my_wish3"
+            android:layout_centerHorizontal="true"
+            android:onClick="true"
+            android:clickable="true" />
+        <TextView
+            android:id="@+id/my_review3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text = "내가 쓴 리뷰"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginRight="22dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="5dp"
+            android:src="@drawable/tab_rectangle"
+            android:id="@+id/redline3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/my_wish3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C9CACA"
+            android:text = "위시리스트"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignTop="@+id/my_review3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="24dp"
+            android:onClick="true"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left_arrow"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="4dp"
+            android:text=" 내가 쓴 리뷰 "
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/reviewcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="4dp"
+            android:text="0개"
+            android:textSize="14sp"
+            android:textColor="#E60012" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/mr_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/list_item_selector"
+        android:drawSelectorOnTop="true"
+        android:dividerHeight="0px"
+        android:divider="#ffffff"/> <!--핀터레스트 리스트뷰-->
+
+</LinearLayout>

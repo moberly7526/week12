@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EFF8F5"
+        android:paddingBottom="14dip"
+        android:paddingLeft="8dip"
+        android:paddingTop="14dip"
+        android:text="개발자 정보가 들어갈 부분입니다"
+        android:textSize="18sp" />
+</RelativeLayout>

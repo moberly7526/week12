@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <!--상단 프레임레이아웃 시작-->
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="178dp"
+        android:background="#3E3A39">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/my_default" />
+        <!--설정 아이콘, 누르면 설정페이지로 넘어감-->
+        <ImageView
+            android:id="@+id/setting_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:onClick="true"
+            android:src="@drawable/setting" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="25dp"
+            android:text="아이디/ 닉넴"
+            android:textColor="#ffffff" />
+
+    </FrameLayout>
+    <!--상단  프레임레이아웃 끝-->
+    <!--탭 시작-->
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#EFEFEF">
+                <!--첫번째 스크롤 뷰 -->
+                <ScrollView
+                    android:id="@+id/tab1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <!--스크롤뷰를 위해 하나로 묶는다-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!--상단안내문구를묶기위한레이아웃-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <!--상단안내문구-->
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/left_arrow"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp" />
+                            <TextView
+                                android:id="@+id/wish1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="5dp"
+                                android:text=" 위시리스트"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                            <TextView
+                                android:id="@+id/wish2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/wish_num"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#E60012" />
+                        </LinearLayout>
+                        <!--안내문구끝-->
+
+                        <!--위시리스트1-->
+                        <FrameLayout
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_edges">
+
+                            <ImageView
+                                android:id="@+id/product_img1"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="12dp"
+                                android:src="@drawable/default_img" />
+
+                            <TextView
+                                android:id="@+id/brand_name1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:layout_marginBottom="35dp"
+                                android:text="브랜드"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/perfume_name1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:layout_marginBottom="15dp"
+                                android:text="향수이름"
+                                android:textSize="14sp" />
+                            <!--위시리스트삭제버튼-->
+                            <ImageView
+                                android:id="@+id/my_delete1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right|top"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:onClick="true"
+                                android:src="@drawable/my_delete" />
+                        </FrameLayout>
+                        <!--위시리스트1끝-->
+                    </LinearLayout>
+                    <!--스크롤 뷰를 위한 레이아웃 끝-->
+                </ScrollView>
+                <!--첫번째 스크롤 뷰 끝-->
+
+                <!--두번째 스크롤 뷰 시작-->
+                <ScrollView
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--스크롤뷰를 위해 하나로 묶는다-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!--상단안내문구를묶기위한레이아웃-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <!--상단안내문구-->
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/left_arrow"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp" />
+                            <TextView
+                                android:id="@+id/recently1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="5dp"
+                                android:text=" 최근 본 향수는"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                            <TextView
+                                android:id="@+id/recently2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="5dp"
+                                android:text="최대 10개 까지 저장됩니다."
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </LinearLayout>
+                        <!--안내문구끝-->
+                        <!--최근 본 향수1-->
+                        <FrameLayout
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_edges">
+
+                            <ImageView
+                                android:id="@+id/product_img2"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="12dp"
+                                android:src="@drawable/default_img" />
+
+                            <TextView
+                                android:id="@+id/brand_name2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:layout_marginBottom="35dp"
+                                android:text="브랜드"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/perfume_name2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:layout_marginBottom="15dp"
+                                android:text="향수이름"
+                                android:textSize="14sp" />
+                            <!--위시리스트삭제버튼-->
+                            <ImageView
+                                android:id="@+id/my_delete2"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right|top"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:onClick="true"
+                                android:src="@drawable/my_delete" />
+                        </FrameLayout>
+                        <!--최근 본 향수1끝-->
+                    </LinearLayout>
+                    <!--스크롤 뷰 자식들 묶기-->
+                </ScrollView>
+                <!--두번째 스크롤 뷰 끝-->
+
+                <!--세번째 스크롤 뷰 시작-->
+                <ScrollView
+                    android:id="@+id/tab3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <!--스크롤 뷰를 위한 레이아웃-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!--상단안내문구를묶기위한레이아웃-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <!--상단안내문구-->
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/left_arrow"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp" />
+                            <TextView
+                                android:id="@+id/myReview1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="5dp"
+                                android:text=" 내가 쓴 리뷰"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                            <TextView
+                                android:id="@+id/myReview2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/review_num"
+                                android:textColor="#E60012"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </LinearLayout>
+                        <!--안내문구끝-->
+                        <!--내가 쓴 리뷰 수직정렬을 위한 레이아웃 시작-->
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <!--제품정보와 리뷰를 묶는 레이아웃-->
+                            <FrameLayout
+                                android:layout_width="320dp"
+                                android:layout_height="130dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_edges">
+                                <!--글 수정및 삭제버튼 이미지-->
+                                <ImageView
+                                    android:id="@+id/reviewUpdateImage"
+                                    android:layout_width="4dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/review_update"
+                                    android:layout_gravity="top|right"
+                                    android:layout_marginRight="3dp" />
+                                <!--제품정보-->
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:id="@+id/productImage"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/default_img" />
+                                    <TextView
+                                        android:id="@+id/brandNameText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="브랜드"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_alignTop="@+id/productImage"
+                                        android:layout_toRightOf="@+id/productImage"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="14sp"
+                                        android:text="향수이름"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_below="@+id/brandNameText"
+                                        android:layout_toRightOf="@+id/productImage"/>
+                                </RelativeLayout>
+                                <!--상품정보와 리뷰를 나누는 경계선 이미지-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/line"
+                                    android:layout_marginTop="50dp" />
+                                <!--리뷰-->
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <!--리뷰 상세페이지 화살표-->
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/left_arrow_2"
+                                        android:layout_marginTop="70dp"
+                                        android:layout_marginLeft="300dp"/>
+                                    <!--리뷰 자세히 보기-->
+                                    <ImageView
+                                        android:id="@+id/profileImage"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="55dp"
+                                        android:src="@drawable/profile_img"/>
+                                    <TextView
+                                        android:id="@+id/userNameText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="아이디아이디"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_alignTop="@+id/profileImage"
+                                        android:layout_toRightOf="@+id/profileImage"/>
+                                    <RatingBar
+                                        android:id="@+id/ratingBar"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        style="?android:attr/ratingBarStyleSmall"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_below="@+id/userNameText"
+                                        android:layout_toRightOf="@+id/profileImage"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10sp"
+                                        android:text="YYYY.MM.DD"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_alignTop="@+id/ratingBar"
+                                        android:layout_toRightOf="@+id/ratingBar"/>
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginTop="90dp"
+                                        android:layout_alignLeft="@+id/userNameText"
+                                        android:text="Neque porro quisquam est qui dolorem ipsum
+                                            dolor sit amet, consectetur, adipisci velit..."/>
+                                </RelativeLayout><!--리뷰끝-->
+                            </FrameLayout><!--제품정보와 리뷰 묶는 레이아웃 끝-->
+                        </LinearLayout>
+                        <!--내가 쓴 리뷰 수직정렬을 위한 레이아웃 끝-->
+                    </LinearLayout>
+                    <!--스크롤 뷰를 위한 레이아웃 끝-->
+                </ScrollView>
+                <!--세번째 스크롤 뷰 끝-->
+            </FrameLayout>
+        </LinearLayout>
+        <!--스크롤 뷰 1,2 묶기 레이아웃 끝-->
+    </TabHost>
+</LinearLayout><!--전체부분 최상위 레이아웃-->
+

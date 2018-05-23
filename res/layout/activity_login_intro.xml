@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_intro">
+
+    <!--상단 텍스트-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:text="이거너향은 향수에 대한 다각적인 정보를 제공하고,"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:text="  시향 시에 편리한 기록을 도와주는 서비스입니다."/>
+    </LinearLayout>
+
+    <!--로그인 버튼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+        <ImageView
+            android:id="@+id/btn_facebook"
+            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:onClick="true"
+            android:src="@mipmap/btn_facebook" />
+        <ImageView
+            android:id="@+id/btn_google"
+            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:onClick="true"
+            android:src="@mipmap/btn_google" />
+        <ImageView
+            android:id="@+id/btn_email"
+            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:onClick="true"
+            android:src="@mipmap/btn_email" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:text="계정이 있으신가요? "/>
+            <TextView
+                android:id = "@+id/btn_login"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:text="로그인"
+                android:onClick="true"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+</LinearLayout>

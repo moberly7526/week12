@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingLeft="3dp" android:paddingRight="3dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp" android:orientation="vertical"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/background_review">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/profile" android:src="@drawable/u"
+            android:layout_width="30dp" android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/userName" android:text="행복한 신화창조"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp" android:textStyle="bold"/>
+        <RatingBar
+            android:id="@+id/ratingBar3" android:rating="3.5"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            style="@style/customRatingBar" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="짱좋아요! 시향만 해보고 구매를 망설였었는데 완전 기대 이상으로 만족하고있어요^^ 무엇보다 남자친구가 아주 좋아해요 헤헤헤헤 부럽지 우히히히 끼루루루루리아아아앙"
+        android:textSize="14dp"
+        android:padding="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

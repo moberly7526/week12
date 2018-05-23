@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="6dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/brandname" android:text="브랜드"
+            android:singleLine="true" android:maxLength="7"
+            android:textSize="14sp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text=" / " android:id="@+id/sl"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/productname" android:text="제품명"
+            android:singleLine="true" android:maxLength="15"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="110dp" android:layout_height="110dp"
+            android:id="@+id/rimg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:layout_marginLeft="10dp" android:layout_gravity="center_horizontal">
+            <RatingBar
+                android:id="@+id/rrb" android:layout_marginTop="2dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                style="@style/customRatingBar2"
+                android:isIndicator="true" />
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:id="@+id/rcomment" android:text="한줄평"
+                android:maxLength="40"
+                android:textStyle="bold"
+                android:layout_below="@+id/rrb"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/alarm"
+                android:layout_toStartOf="@+id/alarm" />
+            <ImageView
+                android:layout_width="80dp" android:layout_height="80dp"
+                android:id="@+id/alarm" android:src="@drawable/alarm9"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">이거너향?</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">로그아웃</string>
+
+    <!--마이페이지 부분-->
+    <string name="action_settings">설정</string>
+    <string name="title_activity_made_by">개발자 정보</string>
+    <string name="title_activity_notification">공지사항</string>
+    <string name="title_activity_version_info">버전 정보</string>
+    <string name="title_activity_login_info">로그인 정보</string>
+    <string name="title_activity_my_page">마이페이지</string>
+
+    <string name="wish_num">2개</string>
+    <string name="review_num">3개</string>
+
+
+</resources>
